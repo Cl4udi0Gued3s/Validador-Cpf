@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@keyframes animacao-fieldset {
+	from {
+		border-image: linear-gradient(to right, red, orange) 100;
+	}
+
+	to {
+		border-image: linear-gradient(to left, blue, purple) 100;
+	}
+}
+
+@keyframes animacao-cpf {
+	from {
+		border: 2px solid orange;
+	}
+
+	to {
+		border: 2px solid purple;
+	}
+}
+
+@keyframes animacao-button {
+	from {
+		background: orange;
+	}
+
+	to {
+		background: purple;
+	}
+}
+
+@keyframes animacao-legend {
+	from {
+		color: orange;
+	}
+
+	to {
+		color: purple;
+	}
+}
+
+body {
+	background: #222;
+}
+
+fieldset {
+	width: 400px;
+	height: 500px;
+	margin: 100px auto;
+	text-align: center;
+	border-radius: 10px;
+	border: 4px solid;
+	border-image: linear-gradient(to right, red, orange) 100;
+	background: #222;
+	animation-name: animacao-fieldset;
+	animation-duration: 8s; 
+	animation-delay: 2s;
+	animation-iteration-count: 1000;
+	animation-direction: alternate;
+}
+
+legend {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: orange;
+	font-family: /*'Roboto', sans-serif*/Arial;
+	animation-name: animacao-legend;
+	animation-duration: 8s; 
+	animation-delay: 2s;
+	animation-iteration-count: 1000;
+	animation-direction: alternate;
+}
+
+#cpf {
+	width: 200px;
+	height: 40px;
+	margin-top: 80px;
+	border-radius: 20px;
+	text-align: center;
+	background: none;
+	border: 2px solid orange;
+	color: white;
+	animation-name: animacao-cpf;
+	animation-duration: 8s; 
+	animation-delay: 2s;
+	animation-iteration-count: 1000;
+	animation-direction: alternate;
+}
+
+
+button {
+	width: 100px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 100px;
+	border: none;
+	border-radius: 20px;
+	display: block;
+	cursor: pointer;
+	background: orange;
+	color: white;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 1.0);
+	animation-name: animacao-button;
+	animation-duration: 8s; 
+	animation-delay: 2s;
+	animation-iteration-count: 1000;
+	animation-direction: alternate;
+}
+
+h2 {
+	margin-top: 40px;
+	font-size: 20px;
+	font-family: Arial;
+}
+
+.sim {
+	color: lightgreen;
+}
+
+.nao {
+	color: lightcoral;
+}
+
+
+@media (max-width: 500px) {
+	fieldset {
+		width: 240px;
+	}
+
+	#cpf {
+		width: 160px;
+	}
+
+	h2 {
+		font-size: 16px;
+	}
+}
